@@ -1,4 +1,4 @@
--- Autor: Walter breno Ataide Gomes
+-- Autor: Walter Breno Ataide Gomes
 -- RU: 1505474
 -- Data: 04/04/2025
 -- Contador up-down
