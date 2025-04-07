@@ -1,0 +1,33 @@
+-- Autor: Walter breno Ataide Gomes
+-- RU: 1505474
+-- Data: 04/04/2025
+-- Contador up-down
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity walter_breno_ataide_gomes is
+    port (
+        clk : in std_logic; --clock, iremos detectar a borda de descida para realizar a contagem
+        rst : in std_logic; --sinal de reset para reiniciar a contagem
+        dir : in std_logic; --direção da contagem 0 incrementa e um decrementa
+        saida : buffer unsigned(3 downto 0)
+    );
+end contador;
+
+architecture arch of walter_breno_ataide_gomes is
+begin
+    contagem : process(clk, rst)
+    begin
+        if rst = '1' then
+            saida <= (others => '0');
+        elsif falling_edge(clk) then
+            if dir = '0' then
+                saida <= saida + 1;
+            else
+                saida <= saida - 1;
+            end if;
+        end if;
+    end process contagem;
+end architecture arch;

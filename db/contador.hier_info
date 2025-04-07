@@ -1,0 +1,19 @@
+|walter_breno_ataide_gomes
+clk => saida[0]~reg0.CLK
+clk => saida[1]~reg0.CLK
+clk => saida[2]~reg0.CLK
+clk => saida[3]~reg0.CLK
+rst => saida[0]~reg0.ACLR
+rst => saida[1]~reg0.ACLR
+rst => saida[2]~reg0.ACLR
+rst => saida[3]~reg0.ACLR
+dir => saida.OUTPUTSELECT
+dir => saida.OUTPUTSELECT
+dir => saida.OUTPUTSELECT
+dir => saida.OUTPUTSELECT
+saida[0] << saida[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] << saida[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] << saida[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] << saida[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
